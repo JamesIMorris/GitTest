@@ -10,12 +10,18 @@ const client = new Client({
 })
 
 client.on('ready', () => {
-    console.log('The bot is ready')
+    console.log('The bot is ready!')
 })
 
 client.on('messageCreate', message => {
     if(message.content === 'ping'){
         message.reply('pong')
+    }
+})
+
+client.on('messageCreate', message => {
+    if(message.content === 'foo'){
+        message.reply('bar')
     }
 })
 
